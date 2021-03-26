@@ -1,8 +1,16 @@
 import App from '../src'
+import Head from 'next/head'
 import {phenomena} from '../src/phenomena'
 
 function HomePage(props) {
-  return <App {...props} />
+  return (
+    <>
+      <Head>
+        <title>Appropriately Casual™</title>
+      </Head>
+      <App {...props} />
+    </>
+  )
 }
 
 export function getServerSideProps({query}) {
