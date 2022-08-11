@@ -51,10 +51,10 @@ var WaterShader = {
       if (byp<1) {
         vec2 uv1 = vUv;
         vec2 uv = gl_FragCoord.xy/resolution.xy;
-        float frequency = 6.0;
+        float frequency = 1.0;
         float amplitude = 0.015 * factor;
-        float x = uv1.y * frequency + time * .7;
-        float y = uv1.x * frequency + time * .3;
+        float x = uv1.y * frequency + time * .1;
+        float y = uv1.x * frequency + time * .05;
         uv1.x += cos(x+y) * amplitude * cos(y);
         uv1.y += sin(x-y) * amplitude * cos(y);
         vec4 rgba = texture2D(tex, uv1);
